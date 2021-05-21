@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @global_area.name %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @global_area.active %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @global_area.description %>
+</p>
+
+<%= link_to 'Edit', edit_global_area_path(@global_area) %> |
+<%= link_to 'Back', global_areas_path %>

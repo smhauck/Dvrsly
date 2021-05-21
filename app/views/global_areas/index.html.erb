@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Global Areas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Active</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @global_areas.each do |global_area| %>
+      <tr>
+        <td><%= global_area.name %></td>
+        <td><%= global_area.active %></td>
+        <td><%= global_area.description %></td>
+        <td><%= link_to 'Show', global_area %></td>
+        <td><%= link_to 'Edit', edit_global_area_path(global_area) %></td>
+        <td><%= link_to 'Destroy', global_area, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Global Area', new_global_area_path %>

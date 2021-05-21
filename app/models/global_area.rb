@@ -1,0 +1,2 @@
+class GlobalArea < ApplicationRecord
+end
