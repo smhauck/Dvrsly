@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @country.name %>
+</p>
+
+<p>
+  <strong>Two letter code:</strong>
+  <%= @country.two_letter_code %>
+</p>
+
+<p>
+  <strong>Three letter code:</strong>
+  <%= @country.three_letter_code %>
+</p>
+
+<p>
+  <strong>Global area:</strong>
+  <%= @country.global_area_id %>
+</p>
+
+<%= link_to 'Edit', edit_country_path(@country) %> |
+<%= link_to 'Back', countries_path %>
