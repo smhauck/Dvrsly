@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_22_015434) do
+ActiveRecord::Schema.define(version: 2021_05_22_065840) do
 
   create_table "countries", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name", null: false
@@ -40,6 +40,15 @@ ActiveRecord::Schema.define(version: 2021_05_22_015434) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "memberships", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "erg_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["erg_id"], name: "index_memberships_on_erg_id"
+    t.index ["user_id"], name: "index_memberships_on_user_id"
+  end
+
   create_table "states", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name", null: false
     t.string "two_letter_code"
@@ -61,5 +70,7 @@ ActiveRecord::Schema.define(version: 2021_05_22_015434) do
   end
 
   add_foreign_key "countries", "global_areas"
+  add_foreign_key "memberships", "ergs"
+  add_foreign_key "memberships", "users"
   add_foreign_key "states", "countries"
 end

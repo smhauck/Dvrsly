@@ -322,7 +322,7 @@ State.create!(name: 'Wyoming', two_letter_code: 'WY')
 # Users
  User.create!(username: 'shannon', password: "shannon", password_confirmation: "shannon", display_name: 'Shannon Hauck', email: 'shannonmariehauck@gmail.com')
 
-500.times do |i|
+250.times do |i|
   User.create!(username: "username_#{i}", password: "pass_#{i}", password_confirmation: "pass_#{i}", display_name: "User Num #{i}", nickname: "#{i}", email: "useremail_#{i}@example.com")
 end
   

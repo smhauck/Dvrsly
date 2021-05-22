@@ -30,5 +30,14 @@
   <%= @user.email %>
 </p>
 
+<div>
+ERGs
+<ul>
+<% @user.ergs.each do |erg| %>
+<li><%= link_to erg.name, erg %></li>
+<% end %>
+</ul>
+</div>
+
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
