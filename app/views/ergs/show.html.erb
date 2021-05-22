@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @erg.name %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @erg.active %>
+</p>
+
+<p>
+  <strong>Homepage:</strong>
+  <%= @erg.homepage %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @erg.description %>
+</p>
+
+<%= link_to 'Edit', edit_erg_path(@erg) %> |
+<%= link_to 'Back', ergs_path %>

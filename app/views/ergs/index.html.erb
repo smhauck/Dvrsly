@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Ergs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Active</th>
+      <th>Homepage</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ergs.each do |erg| %>
+      <tr>
+        <td><%= erg.name %></td>
+        <td><%= erg.active %></td>
+        <td><%= erg.homepage %></td>
+        <td><%= erg.description %></td>
+        <td><%= link_to 'Show', erg %></td>
+        <td><%= link_to 'Edit', edit_erg_path(erg) %></td>
+        <td><%= link_to 'Destroy', erg, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New ERG', new_erg_path %>

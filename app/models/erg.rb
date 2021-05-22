@@ -1,0 +1,2 @@
+class Erg < ApplicationRecord
+end

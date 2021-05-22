@@ -1,0 +1,2 @@
+module ErgsHelper
+end
