@@ -20,8 +20,8 @@
 nav {
   border: 1px solid #000;
 }
-
-a.navbar-brand:hover {
+  
+a:hover, a.navbar-brand:hover {
   background-color: #eee;
   color: #000;
 }
