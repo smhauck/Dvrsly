@@ -4,4 +4,24 @@
 
 * users can see who's in a what erg
 
+* only a site admin and a the user themself can add or remove them from an ERG
+
+*
+
+*
+*
+*
+*
+*
+*
+*
+*
+
+
+
+
+
+
+
+
 
