@@ -320,9 +320,28 @@ State.create!(name: 'Wyoming', two_letter_code: 'WY')
 
 
 # Users
- User.create!(username: 'shannon', password: "shannon", password_confirmation: "shannon", display_name: 'Shannon Hauck', email: 'shannonmariehauck@gmail.com')
+ User.create!(id: 0, username: 'shannon', password: "shannon", password_confirmation: "shannon", display_name: 'Shannon Hauck', email: 'shannonmariehauck@gmail.com')
 
-250.times do |i|
+100.times do |i|
   User.create!(username: "username_#{i}", password: "pass_#{i}", password_confirmation: "pass_#{i}", display_name: "User Num #{i}", nickname: "#{i}", email: "useremail_#{i}@example.com")
 end
-  
+
+10.times do |i|
+  Erg.create!(name: "ERG_name_#{i}")
+end
+
+20.times do |i|
+  Membership.create!(user_id: "#{i}", erg_id: '7')
+end
+
+10.upto(30) do |i|
+  Membership.create!(user_id: "#{i}", erg_id: '1')
+end
+
+25.upto(45) do |i|
+  Membership.create!(user_id: "#{i}", erg_id: '2')
+end
+
+30.upto(50) do |i|
+  Membership.create!(user_id: "#{i}", erg_id: '3')
+end
