@@ -8,26 +8,11 @@
 
 * only site admins or designated people in an ERG can change that particular ERG's information
 
-*
-*
 ## Events
+
 * Events can be sponsored by more than one ERG
 
 * Each ERG that sponsors an Event can track it's own budget
 
 * Events are owned by the user who created it if they do not specify another user. An event assignment can be rejected (tracked in an assignment table.)
-
-*
-*
-*
-*
-*
-
-
-
-
-
-
-
-
 
