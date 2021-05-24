@@ -1,12 +1,18 @@
 # TODO
 
-* can lock users to only sign up using an email with an authorized domain name which can be configured by a site admin
+## Admin Functions
 
-* users can see who's in a what erg
+* Can lock users to only sign up using an email with an authorized domain name which can be configured by a site admin
 
-* only a site admin and a the user themself can add or remove them from an ERG
+* Site admin can add or remove them from an ERG
 
-* only site admins or designated people in an ERG can change that particular ERG's information
+## ERGs
+
+* Users can see who's in a what erg
+
+* User can join or leave ERGs
+
+* Only site admins or designated people in an ERG can change that ERG's information
 
 ## Events
 
@@ -15,4 +21,14 @@
 * Each ERG that sponsors an Event can track it's own budget
 
 * Events are owned by the user who created it if they do not specify another user. An event assignment can be rejected (tracked in an assignment table.)
+
+## Users
+
+* Can change passwords while logged into the site
+
+* Can reset a password if they forgot it. System will create a 30 min token and email the user the link.
+
+** test
+
+
 
