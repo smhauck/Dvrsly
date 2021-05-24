@@ -28,7 +28,10 @@
 
 * Can reset a password if they forgot it. System will create a 30 min token and email the user the link.
 
-** test
+* Can change display name
+
+* For now, cannot change username
+
 
 
 
