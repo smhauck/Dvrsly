@@ -8,6 +8,16 @@ class ErgsController < ApplicationController
 
   # GET /ergs/1 or /ergs/1.json
   def show
+    @user = User.find(session[:user_id])
+    puts "USER: "
+    puts @user.id
+    puts "ERG: "
+    puts @erg.id
+    if @erg.memberships.where(user_id: @user.id).exists?
+      @is_erg_member = true
+    else
+      @is_erg_member = false
+    end
   end
 
   # GET /ergs/new
@@ -60,6 +70,18 @@ class ErgsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_erg
       @erg = Erg.find(params[:id])
+    end
+
+    def is_erg_member?
+      puts "NEWLINE\n\n"
+      puts "current_user: "
+      puts current_user
+      puts "\n\n\n"
+      if @erg.current_user.exists?
+        @is_erg_member = true
+      else
+        @is_erg_member = false
+      end
     end
 
     # Only allow a list of trusted parameters through.
