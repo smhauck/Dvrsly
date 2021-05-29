@@ -8,7 +8,7 @@
 ERG Member: <% if @is_erg_member %>YES<% else %>NO<% end %>
 
 <p>
-<%= link_to 'Member List', members_erg_url(@erg) %>
+<%= link_to @erg.users.count.to_s + " Members", members_erg_url(@erg) %>
 </p>
 
 <p>
