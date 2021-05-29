@@ -16,6 +16,8 @@
 
 * Need paging on user list
 
+* A user will always join at the global level but can also join a local chapter. Joining local chapter is optional because some locations might not have one.
+
 ## Events
 
 * Events can be sponsored by more than one ERG
