@@ -8,6 +8,10 @@
 ERG Member: <% if @is_erg_member %>YES<% else %>NO<% end %>
 
 <p>
+<%= link_to 'Member List', members_erg_url(@erg) %>
+</p>
+
+<p>
   <strong>Active:</strong>
   <%= @erg.active %>
 </p>
@@ -25,11 +29,3 @@ ERG Member: <% if @is_erg_member %>YES<% else %>NO<% end %>
 <%= link_to 'Edit', edit_erg_path(@erg) %> |
 <%= link_to 'Back', ergs_path %>
 
-<div class='ergs_members'>
-<%= @erg.name %> Members
-<ul>
-<% @erg.users.each do |user| %>
-  <li><%= link_to user.display_name, user %></li>
-<% end %>
-</ul>
-</div>

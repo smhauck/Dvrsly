@@ -8,7 +8,6 @@ Rails.application.routes.draw do
   get 'sessions/create'
   get 'sessions/destroy'
 
-  get 'ergs/:id/members' => 'ergs#members'
   resources :users
   root "pages#home"
   get 'pages/home'
@@ -18,6 +17,8 @@ Rails.application.routes.draw do
   resources :states
   resources :countries
   resources :global_areas
-  resources :ergs
+  resources :ergs do
+    get 'members', on: :member
+  end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
