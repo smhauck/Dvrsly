@@ -26,6 +26,10 @@
 
 * Events are owned by the user who created it if they do not specify another user. An event assignment can be rejected (tracked in an assignment table.)
 
+* Events can have Tags for categorization
+
+* Search by event name, ERG, date, date range, description, tags
+
 ## Users
 
 * Can change passwords while logged into the site
@@ -36,6 +40,6 @@
 
 * For now, cannot change username
 
-
+* Search for users by username, display name, nickname
 
 
