@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'sessions/create'
   get 'sessions/destroy'
 
+  get 'ergs/:id/members' => 'ergs#members'
   resources :users
   root "pages#home"
   get 'pages/home'

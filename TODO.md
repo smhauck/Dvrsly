@@ -14,6 +14,8 @@
 
 * Only site admins or designated people in an ERG can change that ERG's information
 
+* Need paging on user list
+
 ## Events
 
 * Events can be sponsored by more than one ERG

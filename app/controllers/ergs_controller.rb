@@ -1,5 +1,5 @@
 class ErgsController < ApplicationController
-  before_action :set_erg, only: %i[ show edit update destroy ]
+  before_action :set_erg, only: %i[ show edit members update destroy ]
 
   # GET /ergs or /ergs.json
   def index
@@ -9,10 +9,6 @@ class ErgsController < ApplicationController
   # GET /ergs/1 or /ergs/1.json
   def show
     @user = User.find(session[:user_id])
-    puts "USER: "
-    puts @user.id
-    puts "ERG: "
-    puts @erg.id
     if @erg.memberships.where(user_id: @user.id).exists?
       @is_erg_member = true
     else
@@ -27,6 +23,11 @@ class ErgsController < ApplicationController
 
   # GET /ergs/1/edit
   def edit
+  end
+
+  # GET /ergs/1/members
+  def members
+    @users = @erg.users.order(:display_name).page params[:page]
   end
 
   # POST /ergs or /ergs.json

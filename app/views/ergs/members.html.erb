@@ -1,0 +1,63 @@
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @erg.name %>
+</p>
+
+ERG Member: <% if @is_erg_member %>YES<% else %>NO<% end %>
+
+<p>
+  <strong>Active:</strong>
+  <%= @erg.active %>
+</p>
+
+<p>
+  <strong>Homepage:</strong>
+  <%= @erg.homepage %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @erg.description %>
+</p>
+
+<%= link_to 'Edit', edit_erg_path(@erg) %> |
+<%= link_to 'Back', ergs_path %>
+
+
+
+
+
+
+<h1>Users</h1>
+
+<%= paginate @users %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Active</th>
+      <th>Display name</th>
+      <th>Username</th>
+      <th>Nickname</th>
+      <th>Email</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= link_to user.display_name, user_path(user) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
+
+
