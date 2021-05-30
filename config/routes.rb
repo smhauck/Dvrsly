@@ -10,10 +10,12 @@ Rails.application.routes.draw do
 
   resources :users
   root "pages#home"
-  get 'pages/home'
-  get 'pages/terms'
-  get 'pages/privacy'
-  get 'pages/about'
+  controller :pages do
+    get 'home'
+    get 'terms' => :terms
+    get 'privacy' => :privacy
+    get 'about' => :about
+  end
   resources :states
   resources :countries
   resources :global_areas
