@@ -19,5 +19,12 @@
     <div class="container-fluid">
       <%= yield %>
     </div>
+    <div class="container-fluid">
+      <footer>
+        <%= link_to 'About', pages_about_url %>
+        <%= link_to 'Privacy', pages_privacy_url %>
+        <%= link_to 'Terms', pages_terms_url %>
+      </footer>
+    </div>
   </body>
 </html>
