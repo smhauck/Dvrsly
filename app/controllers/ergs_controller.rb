@@ -1,5 +1,5 @@
 class ErgsController < ApplicationController
-  before_action :set_erg, only: %i[ show edit members update destroy ]
+  before_action :set_erg, only: %i[ show edit join leave members update destroy ]
 
   # GET /ergs or /ergs.json
   def index
@@ -23,6 +23,22 @@ class ErgsController < ApplicationController
 
   # GET /ergs/1/edit
   def edit
+  end
+
+  # GET /ergs/1/join
+  def join
+    if session[:user_id] && !is_erg_member?
+      @erg.users << User.find(session[:user_id])
+    end
+    redirect_to @erg, notice: "Joined ERG"
+  end
+
+  # GET /ergs/1/leave
+  def leave
+    if session[:user_id] && is_erg_member?
+      @erg.users.delete(session[:user_id])
+    end
+    redirect_to @erg, notice: "Left ERG"
   end
 
   # GET /ergs/1/members
@@ -74,11 +90,8 @@ class ErgsController < ApplicationController
     end
 
     def is_erg_member?
-      puts "NEWLINE\n\n"
-      puts "current_user: "
-      puts current_user
-      puts "\n\n\n"
-      if @erg.current_user.exists?
+      @user = User.find(session[:user_id])
+      if @erg.memberships.where(user_id: @user.id).exists?
         @is_erg_member = true
       else
         @is_erg_member = false

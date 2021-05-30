@@ -14,7 +14,7 @@
   <tbody>
     <% @ergs.each do |erg| %>
       <tr>
-        <td><%= link_to erg.name, erg %></td>
+        <td><%= link_to erg.name, erg %> (<%= erg.users.count.to_s %>)</td>
         <td><%= erg.homepage %></td>
         <td><%= erg.description %></td>
       </tr>

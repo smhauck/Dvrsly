@@ -5,7 +5,9 @@
   <%= @erg.name %>
 </p>
 
-ERG Member: <% if @is_erg_member %>YES<% else %>NO<% end %>
+<p>
+ERG Member: <% if @is_erg_member %>YES <%= link_to '(Leave)', leave_erg_url(@erg), method: :delete, data: { confirm: 'Are you sure?' } %> <% else %><%= link_to 'Join Now', join_erg_url(@erg) %><% end %>
+</p>
 
 <p>
 <%= link_to @erg.users.count.to_s + " Members", members_erg_url(@erg) %>
