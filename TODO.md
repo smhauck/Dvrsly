@@ -30,6 +30,10 @@
 
 * Search by event name, ERG, date, date range, description, tags
 
+* Email participants the event calendar invite
+
+* Event organizers can email participants updates outside the event calendar invite
+
 ## Users
 
 * Can change passwords while logged into the site
