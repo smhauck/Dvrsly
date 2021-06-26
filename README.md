@@ -6,11 +6,12 @@ application up and running.
 Things you may want to cover:
 
 * Ruby version
-** Minimum Ruby 2.7.1, Rails 6.0.3
+
+Minimum Ruby 2.7.1, Rails 6.0.3
 
 * System dependencies
 
-** Built using MySQL Version 8
+Built using MySQL Version 8
 
 * Configuration
 
