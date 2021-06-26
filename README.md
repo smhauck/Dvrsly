@@ -9,6 +9,7 @@ Things you may want to cover:
 ** Minimum Ruby 2.7.1, Rails 6.0.3
 
 * System dependencies
+
 ** Built using MySQL Version 8
 
 * Configuration
@@ -16,7 +17,9 @@ Things you may want to cover:
 * Database creation
 
 * Database initialization
+
 rails db create
+
 rails db migrate
 
 * How to run the test suite
