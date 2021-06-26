@@ -18,6 +18,8 @@
 
 * A user will always join at the global level but can also join a local chapter. Joining local chapter is optional because some locations might not have one.
 
+* Can only delete ERGs if they have no members, events, or other associated records. If associated records can only mark the ERG inactive.
+
 ## Events
 
 * Events can be sponsored by more than one ERG
@@ -34,6 +36,8 @@
 
 * Event organizers can email participants updates outside the event calendar invite
 
+* Deleting Events emails or otherwise notifies everyone that has RSVP'd
+
 ## Users
 
 * Can change passwords while logged into the site
@@ -45,5 +49,9 @@
 * For now, cannot change username
 
 * Search for users by username, display name, nickname
+
+* Need to figure out rules for deleting users.  If they have posts, own events, etc. deletion will screw it up. Maybe just mark as "inactive_user_id" and keep all posts?
+
+
 
 
