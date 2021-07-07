@@ -42,16 +42,14 @@
 
 * Can change passwords while logged into the site
 
-* Can reset a password if they forgot it. System will create a 30 min token and email the user the link.
+* Can reset a password if they forgot it. System will create a 30 min token and email the user the link. If token matches user can create a new password.
 
-* Can change display name
+* Users can change their own display name
 
-* For now, cannot change username
+* For now, cannot change username. Ultimately, users will be anle to change their own username
 
 * Search for users by username, display name, nickname
 
 * Need to figure out rules for deleting users.  If they have posts, own events, etc. deletion will screw it up. Maybe just mark as "inactive_user_id" and keep all posts?
-
-
 
 
